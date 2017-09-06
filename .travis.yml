@@ -1,0 +1,9 @@
+language: python
+python:
+  - "3.6.2"
+  
+
+install:
+  - pip install
+
+script: manage.py test

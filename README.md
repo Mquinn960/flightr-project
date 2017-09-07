@@ -11,7 +11,10 @@ The team Challenge addresses the emerging problem of airports charging car drive
 
 ### How do I get set up? ###
 
-TODO
+* Install [Python](https://www.python.org/)
+* Install [pip](https://pip.pypa.io/en/stable/installing/)
+* Install Django, you can do this once pip is installed by running the following command in a terminal: pip install django
+* Have a quick read through the Django [documentation](https://docs.djangoproject.com/en/1.11/ref/) and get to understand how django works
 
 ### Contribution guidelines ###
 

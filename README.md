@@ -3,7 +3,7 @@ The team Challenge addresses the emerging problem of airports charging car drive
 
 ### CI Build ###
 
-* [Travis CI](https://travis-ci.com/Williams-Dan/TeamChallenge)
+* [Travis CI](https://travis-ci.com/Williams-Dan/FlightR)
 
 ### Slack Channel ###
 

@@ -5,6 +5,10 @@ The team Challenge addresses the emerging problem of airports charging car drive
 
 * [Travis CI](https://travis-ci.com/Williams-Dan/TeamChallenge)
 
+### Slack Channel ###
+
+* [rapsberryPiRates](https://raspsberrypi-rates.slack.com/messages/C6YUQSWSY/)
+
 ### How do I get set up? ###
 
 TODO

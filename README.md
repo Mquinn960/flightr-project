@@ -17,9 +17,11 @@ TODO
 
 * Merges should be done through pull requests:
 
-  Matt -> Dan
-  Dan -> Cameron
-  Cameron -> Matt
+Pull Request | Reviewer
+-------------|--------
+  Matt | Dan
+  Dan | Cameron
+  Cameron | Matt
 
 * Use Feature Branching where applicable
 

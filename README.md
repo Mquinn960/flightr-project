@@ -11,4 +11,8 @@ TODO
 
 ### Contribution guidelines ###
 
-TODO
+Merges should be done through pull requests:
+
+Matt -> Dan
+Dan -> Cameron
+Cameron -> Matt

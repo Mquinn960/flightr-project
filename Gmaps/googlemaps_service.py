@@ -22,7 +22,7 @@ class GooglemapsService(object):
         return json_response[0]['formatted_address']
 
     def get_user_location(self, return_type=None):
-        """ Attempts to geolocate the service user and returns lat and long or address if specified"""
+        """ Attempts to geolocate the service user and returns lat and long or address if specified """
         json_response = self.gmaps.geolocate()
         user_location_coords = "%s,%s" % (json_response['location']['lat'], json_response['location']['lng'])
 
@@ -44,7 +44,17 @@ class GooglemapsService(object):
         #longitude = json_response['longitude']
         return json_response
 
+    def get_user_journey_time(self, origin=None, destination=None):
+        """ Uses distance matrix to retrieve time to desination, defaults to Aberdeen Airport """
+        if origin is None:
+            origin = self.get_user_location()
+        if destination is None:
+            destination = "57.1975253, -2.2057843"
+        
+        json_response = self.gmaps.distance_matrix(origin, destination)
+        return json_response['rows'][0]['elements'][0]['duration']['text']
+
 if __name__ == "__main__":
     """ console test stub """
     gmap_service = GooglemapsService()
-    print(gmap_service.get_user_location())
+    print(gmap_service.get_user_journey_time())

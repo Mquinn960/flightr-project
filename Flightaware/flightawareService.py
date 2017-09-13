@@ -11,4 +11,4 @@ class FlightawareService(object):
 
             result = adapter.api.service.FlightInfo(indent=flight_number)
 
-            return Flight(result['ident'], result['aircrafttype'], result['origin'])
+            return Flight(result['ident'], result['aircrafttype'], result['origin'], result['status'])

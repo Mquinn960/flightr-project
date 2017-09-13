@@ -18,11 +18,11 @@ class GooglemapsService(object):
 
     def get_reverse_geocode_result(self, userlat_long, result_type=None, location_type=None):
         """ Takes Lat and Long of user and returns reverse geocode JSON's formatted address """
-        json_response = self.gmaps.reverse_geocode((userlat_long, result_type, location_type))
+        json_response = self.gmaps.reverse_geocode(userlat_long, result_type, location_type)
         return json_response[0]['formatted_address']
 
     def get_user_location(self, return_type=None):
-        """ Attempts to geolocate the service user and returns lat and long """
+        """ Attempts to geolocate the service user and returns lat and long or address if specified"""
         json_response = self.gmaps.geolocate()
         user_location_coords = "%s,%s" % (json_response['location']['lat'], json_response['location']['lng'])
 
@@ -45,6 +45,6 @@ class GooglemapsService(object):
         return json_response
 
 if __name__ == "__main__":
+    """ console test stub """
     gmap_service = GooglemapsService()
-    print(gmap_service.get_user_location("address"))
-    #print(gmap_service.get_reverse_geocode_result(55.637023299999996, -4.4879348))
+    print(gmap_service.get_user_location())

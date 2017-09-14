@@ -9,9 +9,6 @@ class FlightawareService(object):
             if adapter is None:
                 adapter = SoapAdapter()
 
-            result = adapter.api.service.Enroute('ABZ', 10, '', 0)
-            flights = result['enroute']
+            result = adapter.api.service.FlightInfo(indent=flight_number)
 
-            for flight in flights:
-                if flight['ident'] == flight_number:
-                    return Flight(flight['ident'], flight['aircrafttype'], flight['origin'])
+            return Flight(result['ident'], result['aircrafttype'], result['origin'])

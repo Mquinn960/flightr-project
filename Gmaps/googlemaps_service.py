@@ -43,21 +43,3 @@ class GooglemapsService(object):
         
         json_response = self.gmaps.distance_matrix(origin, destination)
         return json_response['rows'][0]['elements'][0]['duration']['text']
-
-    # Deprecated - do not use
-    # def get_user_ip_location(self):
-    #     """ Attempts to return user's location based on IP leveraging Free Geo IP service 
-    #         Returns the JSON response with keys 'latitude' and 'longitude' """
-    #     send_url = 'http://freegeoip.net/json'
-    #     response = requests.get(send_url)
-    #     json_response = json.loads(response.text)
-    #     #latitude = json_response['latitude']
-    #     #longitude = json_response['longitude']
-    #     return json_response
-
-# CONSOLE TEST STUB
-# if __name__ == "__main__":
-#     """ console test stub """
-    
-#     gmap_service = GooglemapsService()
-#     print(gmap_service.get_user_journey_time())

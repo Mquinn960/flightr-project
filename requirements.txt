@@ -1,4 +1,4 @@
 Django==1.11.5
 requests==2.18.4
 mock==2.0.0
-googlemaps=2.5.1
+googlemaps==2.5.1

@@ -28,13 +28,13 @@ class GooglemapsService(object):
         if return_type is None:
             return_type = "coords"
 
-        if return_type == "coords":
-            return user_location_coords
-        elif return_type == "address":
+        if return_type == "address":
             return self.get_reverse_geocode_result(user_location_coords)
+        else:
+            return user_location_coords
 
     def get_user_journey_time(self, origin=None, destination=None):
-        """ Uses distance matrix to retrieve time to desination, defaults to Aberdeen Airport """
+        """ Uses distance matrix to retrieve time to desination, defaults to Aberdeen Airport pickup zone"""
 
         if origin is None:
             origin = self.get_user_location()

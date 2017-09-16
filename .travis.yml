@@ -1,11 +1,15 @@
 language: python
 python:
-  - "3.6.2"
+  - "2.7.13"
   
 
 install:
+<<<<<<< HEAD
   - pip install django
   - pip install
   - pip install -U googlemaps
+=======
+  - pip install -r requirements.txt
+>>>>>>> master
 
 script: python manage.py test

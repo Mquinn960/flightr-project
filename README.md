@@ -13,8 +13,7 @@ The team Challenge addresses the emerging problem of airports charging car drive
 
 * Install [Python](https://www.python.org/)
 * Install [pip](https://pip.pypa.io/en/stable/installing/)
-* Install [Googlemaps Module](https://github.com/googlemaps/google-maps-services-python)
-* Install Django, you can do this once pip is installed by running the following command in a terminal: pip install django
+* Install the project dependecies, you can do this once pip is installed by running the following command in a terminal: pip install -r requirements.txt
 * Have a quick read through the Django [documentation](https://docs.djangoproject.com/en/1.11/ref/) and get to understand how django works
 
 ### Contribution guidelines ###

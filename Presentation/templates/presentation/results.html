@@ -1,0 +1,20 @@
+{% extends 'presentation/base.html' %}
+{% load static %}
+
+{% block title %}Flight Checker{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="card card-container">
+            <h1 class="flightr-title">FlightR</h1>
+            <h4 class="flightr-description">Here are your results:</h4>
+            <h4 class="flightr-description">
+                <li>Flight Number: {{ results.flight_number }}</li>
+                <br>
+                <li>Twitter Handle: {{ results.twitter_handle }}</li>
+                <br>
+                <li>Journey Time: {{ results.journey_time }}</li>
+            </h4>
+        </div>
+    </div>
+{% endblock %}

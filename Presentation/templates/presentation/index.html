@@ -8,7 +8,7 @@
         <div class="card card-container">
             <h1 class="flightr-title">FlightR</h1>
             <h4 class="flightr-description">Find out your ideal arrival time at Aberdeen Airport pickup point!</h4>
-            <form class="form-signin" role="form" action="" method="post">
+            <form class="form-signin" role="form" action="results.html" method="get">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <button class="flightr-submit btn btn-lg btn-primary btn-block btn-signin" type="submit">Submit</button>

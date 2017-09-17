@@ -33,13 +33,17 @@ class GooglemapsService(object):
         else:
             return user_location_coords
 
-    def get_user_journey_time(self, origin=None, destination=None):
+    def get_user_journey_time(self, origin=None, destination=None, time_type=None):
         """ Uses distance matrix to retrieve time to desination, defaults to Aberdeen Airport pickup zone"""
 
         if origin is None:
             origin = self.get_user_location()
         if destination is None:
             destination = "57.1975253, -2.2057843"
+        if time_type is None:
+            time_type = 'text'
+        elif time_type == 'value':
+            time_type = 'value'
         
         json_response = self.gmaps.distance_matrix(origin, destination)
-        return json_response['rows'][0]['elements'][0]['duration']['text']
+        return json_response['rows'][0]['elements'][0]['duration'][time_type]

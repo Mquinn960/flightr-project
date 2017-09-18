@@ -11,7 +11,9 @@ class FlightawareTests(TestCase):
                                  aircraft_type='jet',
                                  origin='Berlin',
                                  status='Flying',
-                                 actual_arrival_time='time')
+                                 actual_arrival_time='time',
+                                 arrival_delay='time',
+                                 estimated_arrival_time='time')
 
         response = MagicMock()
         response.json = MagicMock(
@@ -20,7 +22,9 @@ class FlightawareTests(TestCase):
                  'aircrafttype': expected_flight.aircraft_type,
                  'origin': expected_flight.origin,
                  'status': expected_flight.status,
-                 'actual_arrival_time': expected_flight.actual_arrival_time}]}})
+                 'actual_arrival_time': expected_flight.actual_arrival_time,
+                 'arrival_delay': expected_flight.arrival_delay,
+                 'estimated_arrival_time': expected_flight.estimated_arrival_time,}]}})
 
         actual_flight = FlightawareService.find_flight(expected_flight.fight_number, response)
 

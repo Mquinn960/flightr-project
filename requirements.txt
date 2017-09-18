@@ -2,3 +2,6 @@ Django==1.11.5
 suds==0.4
 mock==2.0.0
 twython==3.4.0
+requests==2.18.4
+mock==2.0.0
+googlemaps==2.5.1

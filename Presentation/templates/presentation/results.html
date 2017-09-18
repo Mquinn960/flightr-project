@@ -11,10 +11,17 @@
             <h4 class="flightr-description">
                 <li>Flight Number: {{ results.flight_number }}</li>
                 <br>
-                <li>Twitter Handle: {{ results.twitter_handle }}</li>
+                <li>Flight Status: {{ results.flightaware.status }}</li>
                 <br>
-                <li>Journey Time: {{ results.journey_time }}</li>
+                <li>Current Flight Delay: {{ results.flightaware.arrival_delay }}</li>
+                <br>
+                <li>Journey Time to Airport: <br>{{ results.journey_time }}</li>
+                <br>
+                <li>Suggested Time to Start Journey: <br>{{ results.suggested_departure_time }}</li>
+                <br>
+                <li>You should leave in: <br>{{ results.time_to_leave }}</li>
             </h4>
+            <h4 class="flightr-description">We'll tweet you any updates! Travel safely.</h4>
         </div>
     </div>
 {% endblock %}

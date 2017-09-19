@@ -21,4 +21,6 @@ class FlightawareService(object):
                       result['aircrafttype'],
                       result['origin'],
                       result['status'],
-                      result['actual_arrival_time'])
+                      result['actual_arrival_time'],
+                      result['arrival_delay'],
+                      result['estimated_arrival_time'])

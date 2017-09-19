@@ -1,6 +1,4 @@
 from django.test import TestCase
-
-from Twitter.twitterService import TwitterService
 from Twitter.twitterAdapter import TwitterAdaptor
 
 

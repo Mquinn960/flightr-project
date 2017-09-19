@@ -9,17 +9,17 @@
             <h1 class="flightr-title">FlightR</h1>
             <h4 class="flightr-description">Here are your results:</h4>
             <h4 class="flightr-description">
-                <li>Flight Number: {{ results.flight_number }}</li>
+                <li>Flight Number: {{ vm.flight_number }}</li>
                 <br>
-                <li>Flight Status: {{ results.flightaware.status }}</li>
+                <li>Flight Status: {{ vm.flight_status }}</li>
                 <br>
-                <li>Current Flight Delay: {{ results.flightaware.arrival_delay }}</li>
+                <li>Current Flight Delay: {{ vm.current_flight_delay }}</li>
                 <br>
-                <li>Journey Time to Airport: <br>{{ results.journey_time }}</li>
+                <li>Journey Time to Airport: <br>{{ vm.journey_time_to_airport }}</li>
                 <br>
-                <li>Suggested Time to Start Journey: <br>{{ results.suggested_departure_time }}</li>
+                <li>Suggested Time to Start Journey: <br>{{ vm.suggested_time_to_start_journey }}</li>
                 <br>
-                <li>You should leave in: <br>{{ results.time_to_leave }}</li>
+                <li>You should leave in: <br>{{ vm.time_till_leave_time }}</li>
             </h4>
             <h4 class="flightr-description">We'll tweet you any updates! Travel safely.</h4>
         </div>

@@ -1,5 +1,5 @@
 """Main twitter services"""
-from twitterAdapter import TwitterAdaptor
+from Twitter.twitterAdapter import TwitterAdaptor
 
 
 class TwitterService(object):

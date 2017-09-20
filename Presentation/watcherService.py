@@ -42,6 +42,7 @@ class WatcherService(object):
             time_to_leave = "%d Hours and %d Minutes" % (h, m)
 
         suggested_departure_time = time.strftime('%H:%M %d/%m/%Y', time.localtime(suggested_departure_time))
+        journey_time = GooglemapsService.get_user_journey_time()
 
         return FlightDetails(flight_number=flight.fight_number,
                              flight_status=flight.status,
@@ -78,7 +79,7 @@ class WatcherService(object):
 
             if flight.flight_status != status:
                 TwitterService.send_notification(twitter_handle=twitter_handel,
-                                                 message='The status of you flight is: ' + status)
+                                                 message='The status of your flight is: ' + status)
                 status = flight.flight_status
 
             if flight.current_flight_delay != delay:

@@ -1,11 +1,8 @@
-from django.http import HttpResponse
 from django.shortcuts import render
-from django.template import loader
 
 from Presentation.forms import FlightCheckForm
-from Presentation.models import Results
+from Presentation.watcherService import WatcherService
 
-# Create your views here.
 
 def index(request):
     """ Index page for the app """
@@ -16,6 +13,7 @@ def index(request):
         'form': form_class,
     })
 
+
 def results(request, flight_number=None, twitter_handle=None):
     """ Captures main form results and displays """
 
@@ -25,8 +23,8 @@ def results(request, flight_number=None, twitter_handle=None):
     if request.GET['twitter_handle'] != '':
         twitter_handle = request.GET['twitter_handle']
 
-    results = Results(flight_number,twitter_handle)
+    details = WatcherService.watch(twitter_handel=twitter_handle, flight_number=flight_number)
 
     return render(request, 'presentation/results.html', {
-        'results': results,
+        'vm': details,
     })

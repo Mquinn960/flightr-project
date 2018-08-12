@@ -1,13 +1,6 @@
-# TeamChallenge
+# FlightR
+
 The team Challenge addresses the emerging problem of airports charging car drivers to enter the terminal drop off zone to collect arriving passengers.
-
-### CI Build ###
-
-* [Travis CI](https://travis-ci.com/Williams-Dan/FlightR)
-
-### Slack Channel ###
-
-* [rapsberryPiRates](https://raspsberrypi-rates.slack.com/messages/C6YUQSWSY/)
 
 ### How do I get set up? ###
 
@@ -19,12 +12,6 @@ The team Challenge addresses the emerging problem of airports charging car drive
 ### Contribution guidelines ###
 
 * Merges should be done through pull requests:
-
-Pull Request | Reviewer
--------------|--------
-  Matt | Dan
-  Dan | Cameron
-  Cameron | Matt
 
 * Use Feature Branching where applicable
 
